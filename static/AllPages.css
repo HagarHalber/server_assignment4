@@ -1,0 +1,344 @@
+:root {
+    --orange: rgb(233, 76, 19);
+    --wihte: rgb(237, 240, 243);
+    --lightpink: rgb(241, 205, 175);
+    --pink:rgb(219, 136, 136);
+    --darkorange: rgb(85, 27, 6);
+    --black: rgb(2, 2, 2);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+#AboutUsBody{
+    font-family: bold;
+    background-image: url(../static/pizza\ about\ Full.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#ContactUsBody{
+    background-image: url(../static/contactUsPic.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: bold;
+}
+
+#HomePageBody{
+    background-image: url(../static/homepage.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: bold;
+    animation: change 10s infinite ease-in-out;
+}
+
+@keyframes change{
+
+    0%{
+        background-image: url(../static/img3.jpg);
+    }
+
+    25%{
+        background-image: url(../static/img4.jpg);
+    }
+    75%{
+        background-image: url(../static/homepage.jpg);
+    }
+    100%{
+        background-image: url(../static/img3.jpg);
+    }
+}
+
+
+.nav {
+    background-color: var(--orange);
+    color:var(--wihte);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+
+}
+
+#header{
+    font-size: 40px;
+    display: inline-block;
+    padding-left: 0px;
+}
+
+.active {
+    border: 2px solid var(--lightpink);
+    border-radius: 5px;
+}
+
+.navFooter{
+    position:relative;  top: 40px;
+}
+
+.icon {
+    height: 50px;
+    padding-left: 290px;
+}
+
+.facebookicon{
+    height: 50px;
+    padding-left: 95%;
+    size: 20px;
+    position:relative;  top:50px;
+}
+
+.nav-list ,.navFooter  {
+    list-style-type: none;
+}
+
+.nav-list .list-item{
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+.nav a ,.navFooter a{
+    color: var(--wihte);
+    text-decoration: none;
+
+}
+
+ .nav a:hover ,.navFooter a:hover{
+    color: var(--pink);
+}
+
+.text ,.textAboutUs {
+    border-radius: 5px;
+    text-align: left;
+    width: 75%;
+    height: 85%;
+    margin-left: 10%;
+    font-family: bold;
+    margin-top: 10%;
+    background-color: white;
+}
+
+.textAboutUs{
+    margin-top: 35%;
+    font-size: 20px;
+}
+
+
+.inText{
+    padding: 20px;
+    width: 80%
+}
+
+
+.welcome .par {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 20%;
+    font-family: bold;
+    font-size: 40px;
+    color:var(--wihte);
+}
+
+.orderButton {
+    border: var(--pink);
+    position:relative;  top:400px;
+    text-align: center;
+}
+
+.orderButton .Button{
+    font-size: 30px;
+    border-radius: 20px;
+    background-color: var(--orange);
+    border: none;
+    color: var(--wihte);
+    font-family: bold;
+    animation: wiggle 2s linear infinite;
+}
+
+.orderButton .Button:hover{
+    background-color: var(--darkorange);
+
+}
+
+.ButtonSmall{
+    display: none;
+}
+
+.inTextHome{
+    display: none;
+}
+
+#par{
+    font-size: 20px;
+    width: 80%;
+    padding-left: 50px;
+    padding-top: 0px;
+}
+
+#contact ,#email {
+    padding-left: 50px;
+}
+
+#ContactRes{
+    font-size: 18px;
+    text-align: left;
+    padding-left: 50px;
+}
+
+#contactreason{
+    width: 200px;
+    font-family: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+#date{
+    width: 170px;
+    text-align: center;
+}
+
+#text{
+    width: 400px;
+    height: 150px;
+
+}
+
+#textdiv{
+    padding-left: 450px;
+    position:relative;  bottom: 170px;;
+
+}
+
+.input{
+    border: 2px black;
+    display: inline-block;
+    margin-left: 20%;
+    font-size: 25px;
+}
+
+@font-face{
+    font-family: firstFont;
+    src: url(../static/Montserrat/static/Montserrat-Light.ttf);
+
+    font-family: bold;
+    src: url(../static/Montserrat/static/Montserrat-Regular.ttf);
+
+}
+
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+
+    #AboutUsBody{
+        font-family: bold;
+        background-image: url(../static/pizza\ about.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+    }
+
+    .nav-list .list-item{
+        padding-left: 0%;
+        display: inline-block;
+    }
+
+    .nav {
+        background-color: var(--orange);
+        color:var(--wihte);
+        align-items: center;
+        font-size: 15px;
+        justify-content:center;
+        display:  inline-block;
+        padding-left: 10%;
+
+    }
+
+    .text ,#par{
+        font-size: 15px;
+    }
+
+    #header{
+        font-size: 15px;
+        display:  inline-block;
+    }
+
+    .icon{
+        display:none;
+    }
+
+    .facebookicon{
+        height: 50px;
+        padding-left: 90%;
+        size: 20px;
+        position:relative;  top:50px;
+    }
+
+    .text, .textAboutUs {
+        border: 2px;
+        text-align: left;
+        width: 85%;
+        height: 85%;
+        margin-left: 10%;
+        font-family: bold;
+        margin-top: 55%;
+        font-size: 15px;
+    }
+
+    .navFooter a{
+        position:relative;  top: 0%;
+        color: black;
+    }
+
+    .welcome .par {
+        position: absolute;
+        margin-left: 10%;
+        margin-top: 70%;
+        font-family: bold;
+        font-size: 30px;
+        color:rgb(0, 0, 0)
+    }
+
+    .Button{
+        display: none;
+    }
+
+    .ButtonSmall{
+        display: inline;
+        margin-top: 20%;
+        font-size: 30px;
+        background-color: var(--orange);
+        border-radius: 5px;
+        border-color: transparent;
+
+    }
+
+
+
+}

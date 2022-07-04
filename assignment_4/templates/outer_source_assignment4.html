@@ -1,0 +1,61 @@
+{% extends 'Base.html' %}
+
+{% block title %}Assigment 4{% endblock %}
+
+{% block id %}Assignment4_bodyB{% endblock %}
+
+{% block contect %}
+    <script defer src={{ url_for('static', filename='Jason_users.js') }}></script>
+    <div class="container">
+        <div class="main">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h1 style="color: brown" class="card-title">Outer source</h1>
+                        <div class="card-body">
+                            <form id="get-user-form" action="/outer_source" method="post" onsubmit="onFormSubmit()">
+                                <div class="form-row justify-content-center">
+                                    <div class="form-group">
+                                        <input id="id" type="number" name="id" placeholder="Insert ID" required>
+                                    </div>
+                                </div>
+                                <div class="form-row justify-content-center ">
+                                    <input class="btn btn-danger" type="submit" value="find user">
+                                </div>
+                            </form>
+                            <div id="container_outer" class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card ">
+                        <h1 style="color: brown" class="card-title">Inner source</h1>
+                        <div class="card-body">
+                            <form action="/source" method="get">
+                                <div class="form-row justify-content-center">
+                                    <div class="form-group">
+                                        <input type="number" name="id" placeholder="Insert ID" required>
+                                    </div>
+                                </div><br><br>
+                                <div class="form-row justify-content-center ">
+                                    <input class="btn btn-danger" type="submit" value="find user">
+                                </div>
+                            </form>
+                            {% if name and last_name and url %}
+                                <div id="container" class="card-body">
+                                    <img src="{{ url }}" alt="Profile Picture"/>
+                                    <h3>{{ name }} {{ last_name }} </h3>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}

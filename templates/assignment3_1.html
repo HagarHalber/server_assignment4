@@ -1,0 +1,35 @@
+{% extends 'Base.html' %}
+
+{% block title %}Assigment 3{% endblock %}
+
+{% block contect %}
+
+    {% if Pizza %}
+        <div class="Pizza_container">
+        <h2>Our Pizza</h2>
+            {% for title, value in Pizza.items() %}
+                <h3>{{ title }}: {{ value }}</h3><br>
+            {% endfor %}
+    </div>
+    <div class="Topping_container">
+        <h2>Famous toppings</h2>
+        <ol style="list-style: none">
+            {% for topping in Topping %}
+                <li>
+                    <h3>{{ topping | upper() }} </h3><br>
+                </li>
+            {% endfor %}
+        </ol>
+    </div>
+    <div class="dessert_container">
+        <h2>Dessert</h2>
+        <ul >
+            {% for dessert in Dessert %}
+                <li>{{ dessert | lower()}}</li><br>
+            {% endfor %}
+        </ul>
+    </div>
+    {% else %}
+        <h3>something went wrong :(</h3>
+    {% endif %}
+{% endblock %}

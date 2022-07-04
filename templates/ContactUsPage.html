@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs</title>
+    <link rel="stylesheet" href="static/AllPages.css">
+    <script defer src="static/AllPagesJS.js"></script>
+
+</head>
+<body id="ContactUsBody" onload="typing()">
+     <nav class="nav">
+        <div>
+            <header id="header"></header>
+            <img class="icon" src="../static/pizza.png">
+        </div>
+        <ul class="nav-list">
+            <li class="list-item">
+                <a class="headnav" href="/about">About Us</a>
+            </li>
+            <li class="list-item">
+                <a class="headnav" href="/">Home Page</a>
+            </li>
+            <li class="list-item">
+                <a class="headnav" href="/contact">Contact</a>
+            </li>
+            <li class="list-item">
+                <a class="headnav" href="/assignment3_1">Gallery</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="text" >
+        <h1 class="inText">Contact Us</h1><BR></BR>
+        <p id="par">Whatever your comments are, we want to hear from you. Just fill out the feedback form below and we’ll respond as soon as possible.
+            Giving the best support to you is our priority. We know you're a real person with real questions. Just let us know what you need.
+        </p><br>
+        <h1 id="ContactRes">How can we help you today?</h1><br>
+        <form action="URL" id="contact" method="get">
+              <label for="contactreason"></label>
+              <select id="contactreason" name="contactreason">
+              <option value="sales">Sales</option>
+              <option value="help">Help</option>
+              <option value="billing">Billing</option>
+             </select><br><br>
+            <input type="text" id="FullName" name="FullName" placeholder="Full Name"> <br><br>
+            <input type="email" id="Email" name="Email" placeholder="Email" ><br><br>
+            <input type="date" id="date" name="date" placeholder="Date"><br><br>
+            <input type="tel" id="phone number" name="phone number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="phone number">
+            <br>
+            <div class="input">
+                <button id="inputbtn" type="submit" >Submit request</button>
+            </div>
+        </form>
+    </div>
+     <footer class="footer">
+        <nav class="navFooter">
+            <div>
+                <a href="#">
+                    <img class="facebookicon" src="../static/facebook.png">
+                </a>
+            </div>
+            <ul class="nav-list">
+                <li class="list-item">
+                    <a href="AboutUs.html">About Us</a>
+                </li>
+                <li class="list-item">
+                    <a href="HomePage.html" >Home Page</a>
+                </li>
+                <li class="list-item" >
+                    <a href="ContactUs.html" >Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

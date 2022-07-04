@@ -1,0 +1,76 @@
+{% extends 'Base.html' %}
+
+{% block title %}Assigment 4{% endblock %}
+
+{% block id %}Assignment4_body{% endblock %}
+
+{% block contect %}
+<div class="container">
+<div class="main">
+<div class="row">
+<div class="col">
+    <div class="row">
+        <div class="card">
+            <h1 class="card-title">New Account</h1>
+           <div class="card-body">
+             <form action="/Insert_users" method="post">
+                 <div class="form-row">
+                    <div class="form-group">
+                        <input type="number" name="id" maxlength="9" minlength="9" placeholder="Insert ID" required>
+                        <input type="text" name="name" placeholder="Insert Name" required>
+                        <input type="email" name="email" placeholder="abc@dfg.com" required pattern="[^ @]*@[^ @]*.com">
+                        <input type="password" name="password" placeholder="Insert password" required>
+                    </div>
+                 </div>
+                 <div class="form-row justify-content-center ">
+                   <input class="btn btn-danger" type="submit" value="Create New Account">
+                 </div>
+            </form>
+                {% if message_insert %}
+               <h3 style="color: red">{{ message_insert }}</h3>
+               {% endif %}
+           </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card ">
+            <h1 class="card-title">Update Account</h1>
+           <div class="card-body">
+             <form action="/Update_users" method="post">
+                 <div class="form-row">
+                    <div class="form-group">
+                        <input type="number" name="id" placeholder="Insert ID" required>
+                        <input type="text" name="name" placeholder="Insert Name" required>
+                        <input type="email" name="email" placeholder="abc@dfg.com" required pattern="[^ @]*@[^ @]*.com">
+                        <input type="password" name="password" placeholder="Insert password" required>
+                    </div>
+                 </div>
+                 <div class="form-row justify-content-center ">
+                   <input class="btn btn-danger" type="submit" value="Update">
+                 </div>
+            </form>
+              {% if message_update %}
+               <h3 style="color: red">{{ message_update }}</h3>
+               {% endif %}
+           </div>
+        </div>
+    </div>
+</div>
+<div class="col">
+     {% for user in users_list %}
+        <div class="card">
+          <div class="card-body">
+            <h3>{{ user.name }}</h3>
+            <h4>Email: {{ user.email }}</h4>
+            <form action="/Delete_user" method="post">
+                <input type="hidden" name="id" value="{{ user.id }}">
+                <input class="btn btn-danger" type="submit" value="Delete">
+            </form>
+          </div>
+        </div>
+    {% endfor %}
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

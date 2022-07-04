@@ -1,0 +1,35 @@
+<nav class="nav">
+    <div>
+        <header id="header"></header>
+        <img class="icon" src="../static/pizza.png">
+    </div>
+    <ul class="nav-list">
+        <li class="list-item">
+            <a class="headnav" href="/about">About Us</a>
+        </li>
+        <li class="list-item">
+            <a class="headnav" href="/">Home Page</a>
+        </li>
+        <li class="list-item">
+            <a class="headnav" href="/contact">Contact</a>
+        </li>
+        <li class="list-item">
+            <a class="headnav" href="/assignment3_1">Gallery</a>
+        </li>
+        {% if not session['logedin'] %}
+            <li class="list-item">
+                <a class="headnav" href="/assignment3_2">Log In</a>
+            </li>
+        {% else %}
+            <li class="list-item">
+                <a class="headnav" href="/log_out">Log Out</a>
+            </li>
+        {% endif %}
+        <li class="list-item">
+            <a class="headnav" href="/assignment_4">A</a>
+        </li>
+        <li class="list-item">
+            <a class="headnav" href="/outer_source">B</a>
+        </li>
+    </ul>
+</nav>

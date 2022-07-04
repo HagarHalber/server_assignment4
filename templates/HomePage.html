@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="static/AllPages.css">
+    <script defer src="static/AllPagesJS.js"></script>
+</head>
+<body id="HomePageBody" onload="typing()">
+    {% include('Nav.html') %}
+    <div id="main">
+    <div class="welcome">
+        <p class="par">Welcome to Hagar's Pizza a world of wonderful flavors</p>
+    </div>
+    <div class="orderButton">
+        <form method="get" action="URL">
+            <button class="Button" type="submit">Order Online</button><br>
+            <button class="ButtonSmall" type="submit">Order Online</button><br>
+        </form>
+    </div>
+    </div>
+    <footer class="footer" style="position: relative; top: 600px;">
+        <nav class="navFooter">
+            <div>
+                <a href="#">
+                    <img class="facebookicon" src="../static/facebook.png">
+                </a>
+            </div>
+            <ul class="nav-list">
+                <li class="list-item">
+                    <a href="AboutUs.html">About Us</a>
+                </li>
+                <li class="list-item">
+                    <a href="HomePage.html" >Home Page</a>
+                </li>
+                <li class="list-item" >
+                    <a href="ContactUs.html" >Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

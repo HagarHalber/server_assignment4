@@ -1,0 +1,82 @@
+{% extends 'Base.html' %}
+
+{% block title %}Assigment 4{% endblock %}
+
+{% block contect %}
+<form id="get-user-form" action=""  method="post">
+     <div class="form-row">
+        <div class="form-group">
+            <input id="id" type="number" name="id" placeholder="Insert ID" required>
+        </div>
+     </div>
+     <div class="form-row justify-content-center ">
+       <input type="submit" value="find id">
+     </div>
+</form>
+<div class="card">
+      <div id="user-container" class="card-body">
+        <h3 id="name"></h3>
+      </div>
+</div>
+
+<form action="/assignment4/source"  method="get">
+     <div class="form-row">
+        <div class="form-group">
+            <input type="number" name="id" placeholder="Insert ID" required>
+        </div>
+     </div>
+     <div class="form-row justify-content-center ">
+       <input type="submit" value="find id">
+     </div>
+</form>
+
+<script>
+const userContainer = document.getElementById('user-container');
+const form = document.getElementById("get-user-form")
+form.onsubmit = onFormSubmit;
+
+function onFormSubmit(e) {
+    const id = document.getElementById("id").value;
+    getUser(id);
+    e.preventDefault();
+}
+function getUser(id) {
+    const url = `https://reqres.in/api/users/${id}`;
+    fetch(url).then(
+        response => response.json()
+    ).then(
+        response => {
+            const data = response.data;
+            {#document.getElementById('name').innerHTML = data["first_name"]#}
+            userContainer.innerHTML = `
+            <img src="${data.avatar}" alt="Profile Picture"/>
+            <h3>${data.first_name} ${data.last_name}</h3>
+            `
+        }
+    ).catch(
+        err => console.log(err)
+    )
+}
+
+   {#function createUsersList(response) {#}
+   {##}
+   {#     const currMain = document.querySelector("main")#}
+   {#     for (let user of response) {#}
+   {#         console.log(user)#}
+   {#         const section = document.createElement('section')#}
+   {#         section.innerHTML = `#}
+   {#         <img src="${user.avatar}" alt="Profile Picture"/>#}
+   {#         <div>#}
+   {#          <span>${user.first_name} ${user.last_name}</span>#}
+   {#          <br>#}
+   {#          <a href="mailto:${user.email}">Send Email</a>#}
+   {#         </div>#}
+   {#     `#}
+   {#         currMain.appendChild(section)#}
+   {#     }#}
+   {##}
+   {# }#}
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,195 @@
+:root {
+    --orange: rgb(233, 76, 19);
+    --wihte: rgb(237, 240, 243);
+    --lightpink: rgb(241, 205, 175);
+    --pink:rgb(219, 136, 136);
+    --darkorange: rgb(85, 27, 6);
+    --black: rgb(2, 2, 2);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+Body{
+    font-family: bold;
+}
+#Assignment4_bodyB{
+    background-image: url(../static/Tiramiso-large.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#Sign_In_body{
+    background-image: url(../static/basilpic.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.nav {
+    background-color: var(--orange);
+    color:var(--wihte);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+}
+
+.active {
+    border: 2px solid var(--lightpink);
+    border-radius: 5px;
+}
+
+.navFooter{
+    position:relative;  top: 40px;
+}
+
+.icon {
+    height: 50px;
+    padding-left: 290px;
+}
+
+.nav-list ,.navFooter  {
+    list-style-type: none;
+}
+
+.nav-list .list-item{
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+.nav a ,.navFooter a{
+    color: var(--wihte);
+    text-decoration: none;
+
+}
+
+ .nav a:hover ,.navFooter a:hover{
+    color: var(--pink);
+}
+
+
+#header{
+    font-size: 40px;
+    display: inline-block;
+    padding-left: 0px;
+}
+
+h1 {
+    color: var(--orange);
+    text-align: center;
+}
+
+ul, il{
+    font-size: 20px;
+    list-style-type: none;
+
+}
+
+.Pizza_container, .dessert_container, .Topping_container {
+    border: black 3px solid ;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 50%;
+    padding: 10px;
+    align-content: center;
+    color: black;
+}
+
+
+.form_container{
+    border: darkgrey 3px solid;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 50%;
+    padding: 10px;
+    align-content: center;
+    color: black;
+    position: relative;top: 200px;
+ }
+
+.dessert_container{
+    background-image: url(../static/ChocolateCake.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: Dessert_change 15s infinite alternate-reverse;
+}
+
+.Topping_container{
+    background-image: url(../static/onion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation:  Topping_change 15s infinite alternate-reverse;
+    color: black;
+}
+
+.Pizza_container{
+    background-image: url(../static/img3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: Pizza_change 15s infinite alternate-reverse;
+    color: black;
+}
+.card{
+    position: relative; top: 60px;
+    padding: 5px;
+    display: flex;
+    background-color: rgba(231, 170, 106, 0.5);
+    flex-direction: column;
+ }
+
+@keyframes Pizza_change{
+
+    0%{
+        background-image: url(../static/img3.jpg);
+    }
+    50%{
+        background-image: url(../static/HawaiianPizza.jpg);
+    }
+    100%{
+        background-image: url(../static/WhitePizza.jpg);
+    }
+}
+
+@keyframes Topping_change{
+
+    0%{
+        background-image: url(../static/Olives.jpg);
+    }
+    50%{
+        background-image: url(../static/onion.jpg);
+    }
+    100%{
+        background-image: url(../static/corn.jpg);
+    }
+}
+
+@keyframes Dessert_change{
+
+    0%{
+        background-image: url(../static/ChessCake.jpg);
+    }
+    50%{
+        background-image: url(../static/ChocolateCake.jpg);
+    }
+    100%{
+        background-image: url(../static/Tiramiso.jpg);
+    }
+}
+
+@font-face{
+    font-family: firstFont;
+    src: url(../static/Montserrat/static/Montserrat-Light.ttf);
+
+    font-family: bold;
+    src: url(../static/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+@media only screen and (max-width: 1000px) {
+  .container{
+    margin-top: 40%;
+ }
+
+}
