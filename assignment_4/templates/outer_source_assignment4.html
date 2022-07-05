@@ -5,7 +5,6 @@
 {% block id %}Assignment4_bodyB{% endblock %}
 
 {% block contect %}
-    <script defer src={{ url_for('static', filename='Jason_users.js') }}></script>
     <div class="container">
         <div class="main">
             <div class="row">
@@ -13,7 +12,7 @@
                     <div class="card">
                         <h1 style="color: brown" class="card-title">Outer source</h1>
                         <div class="card-body">
-                            <form id="get-user-form" action="/outer_source" method="post" onsubmit="onFormSubmit()">
+                            <form id="get-user-form" action="/assignment_4/outer_source" method="post" onsubmit="onFormSubmit()">
                                 <div class="form-row justify-content-center">
                                     <div class="form-group">
                                         <input id="id" type="number" name="id" placeholder="Insert ID" required>
@@ -33,7 +32,7 @@
                     <div class="card ">
                         <h1 style="color: brown" class="card-title">Inner source</h1>
                         <div class="card-body">
-                            <form action="/source" method="get">
+                            <form action="/assignment_4/source" method="get">
                                 <div class="form-row justify-content-center">
                                     <div class="form-group">
                                         <input type="number" name="id" placeholder="Insert ID" required>
